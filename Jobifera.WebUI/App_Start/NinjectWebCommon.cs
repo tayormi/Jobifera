@@ -10,6 +10,7 @@ namespace Jobifera.WebUI.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    
 
     public static class NinjectWebCommon 
     {

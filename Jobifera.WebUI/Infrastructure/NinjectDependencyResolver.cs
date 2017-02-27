@@ -6,6 +6,7 @@ using Ninject;
 using Moq;
 using Jobifera.Domain.Abstract;
 using Jobifera.Domain.Entities;
+using Jobifera.Domain.Concrete;
 
 namespace Jobifera.WebUI.Infrastructure
 {
@@ -36,7 +37,7 @@ namespace Jobifera.WebUI.Infrastructure
                 new Product { Name = "Fix Air Conditione", Price = 200000 }
 
             });
-            kernel.Bind<IProductsRepository>().ToConstant(mock.Object);
+            kernel.Bind<IProductsRepository>().To<EFProductRepository>();
         }
     }
 }
