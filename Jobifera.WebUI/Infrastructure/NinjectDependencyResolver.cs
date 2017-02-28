@@ -29,14 +29,14 @@ namespace Jobifera.WebUI.Infrastructure
         private void AddBindings()
             {
             //put bindings here
-            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
-            mock.Setup(m => m.Products).Returns(new List<Product>
-            {
-                new Product { Name = "Football", Price = 25 },
-                new Product { Name = "Soft Ball", Price = 179 },
-                new Product { Name = "Fix Air Conditione", Price = 200000 }
+            //Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            //mock.Setup(m => m.Products).Returns(new List<Product>
+            //{
+            //    new Product { Name = "Football", Price = 25 },
+            //    new Product { Name = "Soft Ball", Price = 179 },
+            //    new Product { Name = "Fix Air Conditione", Price = 200000 }
 
-            });
+            //});
             kernel.Bind<IProductsRepository>().To<EFProductRepository>();
         }
     }
